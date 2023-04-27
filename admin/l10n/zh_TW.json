@@ -1,0 +1,36 @@
+{
+	"ODF report template": "ODF 報表管理",
+	"Module overview": "模組概覽",
+	"Convert log": "轉檔紀錄",
+	"How to use the Reporting API": "報表 API 使用方法",
+	"On the ODF report management website, upload the template file, and obtain the API address to convert the file.":
+		"在 ODF 報表管理網站，上傳範本檔案，並取得 API 位址來轉檔。",
+	"API list": "API 清單",
+	"(Note: The {doc_id} of the API needs to be obtained from the ODF report management website.)":
+		"（註：API 的 {doc_id} 需由 ODF 報表管理網站取得。）",
+	"API URL": "API 位址",
+	"Explain": "說明",
+	"Get the detailed structure of all reports (JSON format)":
+		"取得全部報表詳細結構(JSON 格式)",
+	"Get the detailed structure of all reports (YAML format)":
+		"取得全部報表詳細結構(YAML 格式)",
+	"Get the detailed structure of individual report (JSON format)":
+		"取得個別報表詳細結構(JSON 格式)",
+	"Get the detailed structure of individual report (YAML format)":
+		"取得個別報表詳細結構(YAML 格式)",
+	"Get an example JSON data source for individual report.":
+		"取得個別報表的JSON資料源範例",
+	"Get the number of times an individual report was executed.":
+		"取得個別報表被執行的次數",
+	"Using a JSON data source, Make ODF report file.(If add '?outputPDF' after {doc_id}, it will output PDF file)":
+		"利用 JSON 資料源，製作 ODF 報表檔案（若於 {doc_id} 後加上 '?outputPDF' 則會輸出 PDF 檔案）",
+	"or": "或",
+	"Refresh log": "重新整理",
+	"State": "狀態",
+	"To PDF": "轉 PDF",
+	"Date": "日期",
+	"Source IP": "來源 IP",
+	"Success": "成功",
+	"Fail": "失敗",
+	"Yes": "是"
+}

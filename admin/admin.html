@@ -1,0 +1,81 @@
+<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap5.min.css"/>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap5.min.js"></script>
+<nav>
+    <div class="nav nav-tabs" role="tablist">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#a1" type="button" role="tab" aria-selected="true" _="Module overview"></button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#a2" type="button" role="tab" aria-selected="false" _="Convert log"></button>
+    </div>
+</nav>
+<div class="tab-content">
+    <!-- 模組概覽 -->
+    <div id="a1" class="active tab-pane mt-3">
+        <div>
+            <div><strong _="How to use the Reporting API"></strong> : </div>
+            <div _="On the ODF report management website, upload the template file, and obtain the API address to convert the file."></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table caption-top align-middle table-bordered table-striped .table-hover">
+                <caption><strong _="API list"></strong> : <span _="(Note: The {doc_id} of the API needs to be obtained from the ODF report management website.)"></span></caption>
+                <thead>
+                    <tr>
+                        <th scope="col" _="API URL"></th>
+                        <th scope="col" _="Explain"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/api</th>
+                        <td _="Get the detailed structure of all reports (JSON format)"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/yaml</th>
+                        <td _="Get the detailed structure of all reports (YAML format)"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/{doc_id}/api</th>
+                        <td _="Get the detailed structure of individual report (JSON format)"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/{doc_id}/yaml</th>
+                        <td _="Get the detailed structure of individual report (YAML format)"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/{doc_id}/json</th>
+                        <td _="Get an example JSON data source for individual report."></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/{doc_id}/accessTimes</th>
+                        <td _="Get the number of times an individual report was executed."></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">/lool/mergeodf/{doc_id}<div _="or"></div>/lool/mergeodf/{doc_id}?outputPDF</th>
+                        <td _="Using a JSON data source, Make ODF report file.(If add '?outputPDF' after {doc_id}, it will output PDF file)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <img src="images/mergeodf.png"></img>
+        </div>
+    </div>
+
+    <!-- 轉檔紀錄 -->
+    <div id="a2" class="tab-pane mt-3">
+        <button id="refreshLog" class="btn btn-outline-primary btn-sm float-end" _="Refresh log"></button>
+        <table id="logging_table" class="table table-light table-sm table-striped table-bordered table-hover mt-1" style="width:100%">
+            <thead>
+                <tr class="bg-primary">
+                    <th _="State"></th>
+                    <th _="Date"></th>
+                    <th _="Source IP"></th>
+                    <th>檔名</th>
+                    <th>檔案類型</th>
+                    <th _="To PDF"></th>
+                </tr>
+            </thead>
+            <tbody id="logging_content">
+            </tbody>
+        </table>
+    </div>
+</div>
