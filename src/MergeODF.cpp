@@ -339,10 +339,7 @@ void MergeODF::log(const std::shared_ptr<StreamSocket>& socket,
     std::string file_ext = repo.extname;
 
     // 來源 IP
-    std::size_t pos = socket->clientAddress().rfind(":");
-    std::string sourceIP =
-        (pos != std::string::npos ? socket->clientAddress().substr(pos + 1) : socket->clientAddress());
-
+    std::string sourceIP = socket->clientAddress();
     auto session = getDataSession();
     session << "INSERT INTO logging (status, to_pdf, source_ip, file_name, file_ext) "
             << "VALUES(?, ?, ?, ?, ?)",
